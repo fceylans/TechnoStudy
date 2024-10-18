@@ -14,7 +14,7 @@ public class TermsOfUse extends BaseDriver {
     @Test(groups = {"Smoke Test"})
     public void Test_08()
     {
-        Elements elements=new Elements();
+        POM locators = new POM();
         JavascriptExecutor js=(JavascriptExecutor)driver;
 
         driver.get("https://techno.study/tr/");
@@ -22,10 +22,10 @@ public class TermsOfUse extends BaseDriver {
         WebElement footer= driver.findElement(By.xpath("(//div[@class='tn-atom'])[1]"));
         js.executeScript("arguments[0].scrollIntoView();", footer);
 
-        wait.until(ExpectedConditions.visibilityOf(elements.checkBoxFile));
-        Assert.assertTrue(elements.checkBoxFile.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOf(locators.checkBoxFile));
+        Assert.assertTrue(locators.checkBoxFile.isDisplayed());
 
-        wait.until(ExpectedConditions.visibilityOf(elements.checkBox)).click();
+        wait.until(ExpectedConditions.visibilityOf(locators.checkBox)).click();
 
         String homepage = driver.getWindowHandle();
         Set<String> handles = driver.getWindowHandles();
