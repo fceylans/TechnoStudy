@@ -108,4 +108,26 @@ public class POM {
 
     @FindBy(xpath = "//*[.='Techno Study ile Veri Bilimci Olun']")
     public WebElement dataScienceContent;
+
+    @FindBy (xpath = "//div[@data-elem-id='1702990889506']")
+    public WebElement facebook;
+
+    @FindBy (xpath = "//div[@data-elem-id='1702990962792']")
+    public WebElement instagram;
+
+    @FindBy (xpath = "//div[@data-elem-id='1702990970230']")
+    public WebElement youtube;
+
+    @FindBy (xpath = "//div[@data-elem-id='1702991074133']")
+    public WebElement linkedin;
+
+    @FindBy(xpath = "//span[@class='t-checkbox__labeltext']")
+    public WebElement checkBoxFile;
+
+    @FindBy(xpath = "(//a[@target='_blank'])[1]")
+    public WebElement checkBox;
+
+
+
+
 }
