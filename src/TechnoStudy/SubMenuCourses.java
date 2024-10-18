@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class SubMenuCourses extends BaseDriver {
 
-    @Test
+    @Test(groups = {"Smoke Test"})
     public void subMenuCourses() {
         POM locators = new POM();
 

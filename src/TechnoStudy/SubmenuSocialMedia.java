@@ -11,7 +11,7 @@ public class SubmenuSocialMedia extends BaseDriver {
 
     @Test(groups = {"Smoke Test"})
     public void US_05() {
-        Elements elements = new Elements();
+        POM locators = new POM();
 
         driver.get("https://techno.study/tr/");
 
@@ -20,25 +20,25 @@ public class SubmenuSocialMedia extends BaseDriver {
         WebElement footer = driver.findElement(By.id("rec684017893"));
         js.executeScript("arguments[0].scrollIntoView();", footer);
 
-        wait.until(ExpectedConditions.visibilityOf(elements.facebook));
-        Assert.assertTrue(elements.facebook.isDisplayed(), "Simge görünmüyor");
-        wait.until(ExpectedConditions.visibilityOf(elements.instagram));
-        Assert.assertTrue(elements.instagram.isDisplayed(), "Simge görünmüyor");
-        wait.until(ExpectedConditions.visibilityOf(elements.youtube));
-        Assert.assertTrue(elements.youtube.isDisplayed(), "Simge görünmüyor");
-        wait.until(ExpectedConditions.visibilityOf(elements.linkedin));
-        Assert.assertTrue(elements.linkedin.isDisplayed(), "Simge görünmüyor");
+        wait.until(ExpectedConditions.visibilityOf(locators.facebook));
+        Assert.assertTrue(locators.facebook.isDisplayed(), "Simge görünmüyor");
+        wait.until(ExpectedConditions.visibilityOf(locators.instagram));
+        Assert.assertTrue(locators.instagram.isDisplayed(), "Simge görünmüyor");
+        wait.until(ExpectedConditions.visibilityOf(locators.youtube));
+        Assert.assertTrue(locators.youtube.isDisplayed(), "Simge görünmüyor");
+        wait.until(ExpectedConditions.visibilityOf(locators.linkedin));
+        Assert.assertTrue(locators.linkedin.isDisplayed(), "Simge görünmüyor");
 
-        elements.facebook.click();
+        locators.facebook.click();
         driver.navigate().back();
 
-        elements.instagram.click();
+        locators.instagram.click();
         driver.navigate().back();
 
-        elements.youtube.click();
+        locators.youtube.click();
         driver.navigate().back();
 
-        elements.linkedin.click();
+        locators.linkedin.click();
         driver.navigate().back();
 
 

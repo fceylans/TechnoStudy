@@ -5,10 +5,10 @@
 
         <!--çalışacak classların yazıldığı bölüm-->
         <classes>
+            <class name="TechnoStudy._04_Groups"></class>
+            <class name="TechnoStudy._04_Groups"></class>
+            <class name="TechnoStudy._04_Groups"></class>
             <class name="TechnoStudy.SubMenuCourses"></class>
-            <class name="TechnoStudy._04_Groups"></class>
-            <class name="TechnoStudy._04_Groups"></class>
-            <class name="TechnoStudy._04_Groups"></class>
             <class name="TechnoStudy.SubmenuSocialMedia"></class>
             <class name="TechnoStudy._04_Groups"></class>
             <class name="TechnoStudy._04_Groups"></class>
