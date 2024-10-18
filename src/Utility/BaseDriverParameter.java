@@ -1,6 +1,17 @@
 package Utility;
 
 
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+
 import java.time.Duration;
 
 public class BaseDriverParameter {
@@ -8,7 +19,7 @@ public class BaseDriverParameter {
     public WebDriverWait wait;
 
     @BeforeClass
-    @Parameters("browserTipi")
+   @Parameters("browserTipi")
     public void BaslangicIslemleri(String browserTipi){
         // System.out.println("Başlangıç işlemleri yapılıyor");
 
