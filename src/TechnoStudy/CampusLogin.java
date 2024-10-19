@@ -1,52 +1,25 @@
 package TechnoStudy;
 
-import Utlity.BaseDriver;
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import Utility.BaseDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 
 public class CampusLogin extends BaseDriver {
 
-    @Test
-    public void Test1(){
+    @Test(groups = {"Smoke Test"})
+    public void CampusLogin() {
+
+        POM locators = new POM();
 
         driver.get("https://techno.study/");
-        driver.manage().window().maximize();
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@href=\"https://campus.techno.study\"])[1]")));
-        WebElement loginbutton= driver.findElement(By.xpath("(//a[@href=\"https://campus.techno.study\"])[1]"));
-        loginbutton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(locators.login));
+        locators.login.click();
 
-        Assert.assertTrue("Campuse giriş yapılamadı",
-                driver.getCurrentUrl().equalsIgnoreCase("https://campus.techno.study/"));
-
-
-
-
-        BekleKapat();
-
-
-
-
-
-
-
-
-
-
-
-
+        Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("https://campus.techno.study/"),
+                "Campuse giriş yapılamadı");
 
     }
-
-
-
-
-
-
-
-
-
 }
