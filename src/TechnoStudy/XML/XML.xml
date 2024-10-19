@@ -12,7 +12,7 @@
             <class name="TechnoStudy.LogoToHomepage"></class>
             <class name="TechnoStudy.SubMenuCourses"></class>
             <class name="TechnoStudy.SubmenuSocialMedia"></class>
-            <class name="TechnoStudy._04_Groups"></class>
+            <class name="TechnoStudy.DropdownMenu"></class>
             <class name="TechnoStudy.CourseDetails"></class>
             <class name="TechnoStudy.TermsOfUse"></class>
         </classes>
