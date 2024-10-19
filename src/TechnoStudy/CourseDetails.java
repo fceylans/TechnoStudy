@@ -1,6 +1,6 @@
 package TechnoStudy;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverParameter;
 import Utility.Tools;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class CourseDetails extends BaseDriver {
+public class CourseDetails extends BaseDriverParameter {
 
     @Test(groups = {"Smoke Test"})
     @Parameters("browserTipi")

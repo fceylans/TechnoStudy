@@ -35,9 +35,6 @@ public class POM {
     @FindBy(xpath = "//div[@class='tn-atom']/p/strong")
     public WebElement controlTextAndroid;
 
-    @FindBy(xpath = "//div[@data-elem-type='button']/a")
-    public WebElement androidButton;
-
     @FindBy(xpath = "(//div[text()='Android Uygulama Geliştirme'])[1]")
     public WebElement shortTextAndroid;
 
@@ -47,20 +44,8 @@ public class POM {
     @FindBy(xpath = "//div[@data-field-top-value='50']/h2")
     public WebElement controlTextDataSci;
 
-    @FindBy(xpath = "//a[text()='Detaylı bilgi']")
-    public WebElement detailedInfoButton;
-
     @FindBy(xpath = "//div[.='Online Veri Bilimi Dersleri']")
     public WebElement shorTextData;
-
-    @FindBy(linkText = "Job Center & Arbeitsamt")
-    public WebElement jobCenter;
-
-    @FindBy(css = "[data-field-left-value='554'] div")
-    public WebElement jobCenterControlText;
-
-    @FindBy(xpath = "(//div[contains(text(),'Techno Study')])[2]")
-    public WebElement jobCenterShortText;
 
     @FindBy(xpath = "//*[text()='SDET']")
     public WebElement courseSDET;
@@ -71,14 +56,8 @@ public class POM {
     @FindBy(xpath = "//*[text()='Şimdi Başvur']")
     public WebElement applyNowButton;
 
-    @FindBy(css = "[class='tn-atom'] strong")
-    public WebElement informationSDET;
-
     @FindBy(xpath = "//div[contains(@class,'leftcontainer')]//img")
     public WebElement technoLogo;
-
-    @FindBy(xpath = "(//*[text()='BAŞVUR'])[2]")
-    public WebElement homepageControl;
 
     @FindBy(xpath = "//*[text()='Android Uygulama Geliştiricisi']")
     public WebElement courseAndroidApplication;
@@ -86,35 +65,8 @@ public class POM {
     @FindBy(xpath = "(//*[text()='Detaylı bilgi'])[3]")
     public WebElement androidApplicationButton;
 
-    @FindBy(xpath = "(//*[text()='Android Uygulama Geliştirme'])[3]")
-    public WebElement androidApplicationText;
-
-    @FindBy(xpath = "//*[text()='Detaylı bilgi']")
-    public WebElement detailedButtonSecond;
-
-    @FindBy(xpath = "(//p[@style='text-align: center;'])[4]")
-    public WebElement informationField;
-
-    @FindBy(xpath = "(//p[@style='text-align: center;'])[6]")
-    public WebElement informationFieldSecond;
-
-    @FindBy(xpath = "//*[.='Mezunlarımızı neler bekliyor?']")
-    public WebElement informationFieldThird;
-
-    @FindBy(xpath = "(//*[text()='Veri Bilimi'])[2]")
-    public WebElement dataScience2;
-
     @FindBy(xpath = "//*[text()='Detaylı bilgi']")
     public WebElement dataScienceButton;
-
-    @FindBy(xpath = "//*[text()='Detaylı bilgi']")
-    public WebElement detailedButton;
-
-    @FindBy(xpath = "//div[.='Online Veri Bilimi Dersleri']")
-    public WebElement onlineText;
-
-    @FindBy(xpath = "//*[.='Techno Study ile Veri Bilimci Olun']")
-    public WebElement dataScienceContent;
 
     @FindBy (xpath = "//div[@data-elem-id='1702990889506']")
     public WebElement facebook;
@@ -136,8 +88,6 @@ public class POM {
 
     @FindBy(xpath = "(//a[@href=\"https://campus.techno.study\"])[1]")
     public WebElement login;
-
-
 
     @FindBy(xpath = " //a[text()='BAŞVUR']")
     public WebElement applyBtn;
