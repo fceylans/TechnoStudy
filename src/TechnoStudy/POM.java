@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class POM {
 
@@ -19,6 +20,12 @@ public class POM {
 
     @FindBy(linkText = "Kurslar")
     public WebElement courseDropdown;
+
+    @FindBy(xpath = "//nav[@class=\"t228__centercontainer\"]")
+    public WebElement coursesDropdownn;
+
+    @FindBy(xpath = "//span[contains(@class,'link-inner_left')]")
+    public List<WebElement> courses;
 
     @FindBy(linkText = "SDET-Yazılım Test Uzmanı")
     public WebElement sdet;
