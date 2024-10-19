@@ -3,12 +3,14 @@ package TechnoStudy;
 import Utility.BaseDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
 public class CampusLogin extends BaseDriver {
 
     @Test(groups = {"Smoke Test"})
+    @Parameters("browserTipi")
     public void CampusLogin() {
 
         POM locators = new POM();

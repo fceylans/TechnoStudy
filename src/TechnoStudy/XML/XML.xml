@@ -2,12 +2,14 @@
 
 <suite name="My Suit">
     <test name="My Test 1">
-
+        <parameter name="browserTipi" value="chrome"></parameter>
+        <parameter name="browserTipi" value="edge"></parameter>
+        <parameter name="browserTipi" value="firefox"></parameter>
 
         <classes>
-            <class name="TechnoStudy._04_Groups"></class>
+            <class name="TechnoStudy.Booking"></class>
             <class name="TechnoStudy.CampusLogin"></class>
-            <class name="TechnoStudy._04_Groups"></class>
+            <class name="TechnoStudy.LogoToHomepage"></class>
             <class name="TechnoStudy.SubMenuCourses"></class>
             <class name="TechnoStudy.SubmenuSocialMedia"></class>
             <class name="TechnoStudy._04_Groups"></class>

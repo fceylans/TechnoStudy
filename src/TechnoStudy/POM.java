@@ -1,11 +1,18 @@
 package TechnoStudy;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import Utility.BaseDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.time.Duration;
 
 public class POM {
 
+    WebDriverWait wait=new WebDriverWait(BaseDriver.driver, Duration.ofSeconds(20));
     public POM() {
         PageFactory.initElements(BaseDriver.driver,this);
     }
@@ -129,6 +136,75 @@ public class POM {
 
     @FindBy(xpath = "(//a[@href=\"https://campus.techno.study\"])[1]")
     public WebElement login;
+
+
+
+    @FindBy(xpath = " //a[text()='BAŞVUR']")
+    public WebElement applyBtn;
+
+    @FindBy(xpath = " //input[@name='name']")
+    public WebElement name;
+
+    @FindBy(xpath = " //input[@name='email']")
+    public WebElement email;
+
+    @FindBy(xpath = " //div[@class='t-input-phonemask__select']//span")
+    public WebElement phoneSelect;
+
+    @FindBy(xpath = " //div[@id='t-phonemask_ar']")
+    public WebElement countryCode;
+
+    @FindBy(xpath = " //input[@type='tel']")
+    public WebElement phoneNo;
+
+    @FindBy(xpath = " //input[@name='Input']")
+    public WebElement age;
+
+    @FindBy(xpath = " //input[@name='Input_2']")
+    public WebElement job;
+
+    @FindBy(xpath = " //select[@name='country']")
+    public WebElement educationStatus;
+
+    @FindBy(xpath = " //select[@name='country_2']")
+    public WebElement countryChoice;
+
+    @FindBy(xpath = " //select[@name='course']")
+    public WebElement courseChoice;
+
+    @FindBy(xpath = " //select[@name='survey']")
+    public WebElement surveyChoice;
+
+    @FindBy(xpath = " //div[@class='t-checkbox__indicator']")
+    public WebElement conditionBtn;
+
+    @FindBy(xpath = " //button[@type='submit']")
+    public WebElement toSendBtn;
+
+    @FindBy(xpath = " //div[@id='tildaformsuccesspopuptext']//p/span")
+    public WebElement applicationMassage;
+
+    @FindBy(xpath = " (//a[text()='Kurslar'])[1]")
+    public WebElement menuCourses;
+
+    public void verifyContainsText(WebElement element, String value){
+        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
+
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
+    }
+
+    public void checkAndClickLogo() {
+        By logoSelector = By.cssSelector("img[alt='TechnoStudy']");
+
+        WebElement logo = BaseDriver.driver.findElement(logoSelector);
+        wait.until(ExpectedConditions.elementToBeClickable(logo));
+        BaseDriver.softAssert.assertTrue(logo.isDisplayed(), "TechnoStudy logosu görüntülenemiyor.");
+        logo.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='BAŞVUR']")));
+        BaseDriver.softAssert.assertEquals(BaseDriver.driver.getCurrentUrl(), "https://techno.study/tr", "Logo'ya tıklanınca ana sayfaya yönlendirilmedi.");
+
+    }
 
 
 }

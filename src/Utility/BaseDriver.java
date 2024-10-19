@@ -1,4 +1,10 @@
 package Utility;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +16,7 @@ import org.testng.annotations.BeforeClass;
 import java.time.Duration;
 
 public class BaseDriver {
+    public static SoftAssert softAssert=new SoftAssert();
     public static WebDriver driver;
     public static WebDriverWait wait;
     public static JavascriptExecutor js;
@@ -25,6 +32,7 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         wait=new WebDriverWait(driver,Duration.ofSeconds(20));
         js=(JavascriptExecutor)driver;
+
 
     }
 
