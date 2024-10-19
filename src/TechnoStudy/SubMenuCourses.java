@@ -1,16 +1,11 @@
 package TechnoStudy;
 
-import TestCase1.Elements;
 import Utility.BaseDriver;
 import Utility.Tools;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import java.util.Random;
 
 public class SubMenuCourses extends BaseDriver {
 

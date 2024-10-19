@@ -10,8 +10,6 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-import java.util.List;
-
 public class POM {
 
     WebDriverWait wait=new WebDriverWait(BaseDriver.driver, Duration.ofSeconds(20));
@@ -138,10 +136,8 @@ public class POM {
 
     @FindBy(xpath = "(//a[@href=\"https://campus.techno.study\"])[1]")
     public WebElement login;
-    @FindBy(xpath = "//nav[@class=\"t228__centercontainer\"]")
-    public WebElement coursesDropdown;
-    @FindBy(xpath = "//span[contains(@class,'link-inner_left')]")
-    public List<WebElement> courses;
+
+
 
     @FindBy(xpath = " //a[text()='BAŞVUR']")
     public WebElement applyBtn;

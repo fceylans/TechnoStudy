@@ -9,20 +9,6 @@ import org.testng.annotations.Test;
 
 public class Booking extends BaseDriverParameter {
 
-
-    /*
-   Test Case 3: Booking
-1. Anasayfanın belirgin bir bölümünde "Başvur" veya "Apply" gibi bir buton bulunmalıdır.
-2. "Başvur" butonuna tıkladığımda, başvuru formunun olduğu bir sayfaya yönlendirilmelidir.
-3. Başvuru formunda gerekli bilgiler (ad, soyad, iletişim bilgileri, istenilen kurs, vb.) kolayca
-doldurulabilir olmalıdır.
-4. Environmentin test sonrasında temiz kalması için, ad-soyad ve email kısımlarında "test"
-ibaresi mutlaka bulunmalıdır: "Test Ali Karaca" veya "test_a.karaca@gmail.com" gibi... ve
-ülke olarak ANDORA seçilmelidir.
-5. Başvuru formu doldurulduktan sonra, "Gönder" veya "Submit" butonuna tıkladığımda
-başvurumun iletilmesi ve bir onay mesajı görüntülenmesi gerekmektedir.
-    */
-
     @Test(groups = {"Smoke Test"})
     @Parameters("browserTipi")
     public void Booking(){
