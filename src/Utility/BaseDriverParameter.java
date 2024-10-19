@@ -2,6 +2,7 @@ package Utility;
 
 
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,12 +12,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
 public class BaseDriverParameter {
+    public static SoftAssert softAssert=new SoftAssert();
     public WebDriver driver;
     public WebDriverWait wait;
+    public static JavascriptExecutor js;
 
     @BeforeClass
    @Parameters("browserTipi")
@@ -35,8 +39,8 @@ public class BaseDriverParameter {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // 20 sn mühlet: elementi bulma mühleti
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        js=(JavascriptExecutor)driver;
 
-        Login();
     }
 
     @AfterClass
@@ -47,7 +51,5 @@ public class BaseDriverParameter {
         driver.quit();
     }
 
-    public void Login() {
 
-    }
 }
