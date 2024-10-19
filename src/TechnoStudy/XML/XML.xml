@@ -3,19 +3,19 @@
 <suite name="My Suit">
     <test name="My Test 1">
 
-        <!--çalışacak classların yazıldığı bölüm-->
+
         <classes>
             <class name="TechnoStudy._04_Groups"></class>
-            <class name="TechnoStudy._04_Groups"></class>
+            <class name="TechnoStudy.CampusLogin"></class>
             <class name="TechnoStudy._04_Groups"></class>
             <class name="TechnoStudy.SubMenuCourses"></class>
             <class name="TechnoStudy.SubmenuSocialMedia"></class>
             <class name="TechnoStudy._04_Groups"></class>
-            <class name="TechnoStudy._04_Groups"></class>
+            <class name="TechnoStudy.CourseDetails"></class>
             <class name="TechnoStudy.TermsOfUse"></class>
         </classes>
 
-        <!-- hangi gruplar çalıştırılacak-->
+
         <groups>
             <run>
                 <include name="Smoke Test"></include>

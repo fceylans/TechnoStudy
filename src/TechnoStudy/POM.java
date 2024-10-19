@@ -127,7 +127,8 @@ public class POM {
     @FindBy(xpath = "(//a[@target='_blank'])[1]")
     public WebElement checkBox;
 
-
+    @FindBy(xpath = "(//a[@href=\"https://campus.techno.study\"])[1]")
+    public WebElement login;
 
 
 }
