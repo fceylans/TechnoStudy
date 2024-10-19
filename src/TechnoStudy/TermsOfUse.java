@@ -1,6 +1,6 @@
 package TechnoStudy;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverParameter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import java.util.Set;
 
-public class TermsOfUse extends BaseDriver {
+public class TermsOfUse extends BaseDriverParameter {
 
     @Test(groups = {"Smoke Test"})
     @Parameters("browserTipi")

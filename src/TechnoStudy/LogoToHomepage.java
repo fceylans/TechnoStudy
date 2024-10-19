@@ -13,13 +13,6 @@ import java.util.Set;
 
 public class LogoToHomepage extends BaseDriverParameter {
 
-      /*
-    Test Case 6: Logo To Homepage
- 1. Web sitesinin her sayfasının üst menüsünde Techno Study logosu bulunmalıdır.
- 2. Techno Study logosuna tıkladığımda, ana sayfaya hızlıca yönlendirilmelidir.
-     */
-
-
     @Test(groups = {"Smoke Test"})
     @Parameters("browserTipi")
     public void LogoToHomepage() {
