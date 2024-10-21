@@ -83,11 +83,11 @@ This project was designed for participants to test their own skills. It was crea
 
 | Role            | Name               |
 |-----------------|--------------------|
-|QA Automation Engineer & Project Lead    | [Fatmanur CEYLAN](https://github.com/fceylans)  |
-| QA Automation Engineer          | [Buse OZER](https://github.com/acklnbuse)                      |
+|QA Automation Engineer & Project Lead  | [Fatmanur CEYLAN](https://github.com/fceylans)  |
+| QA Automation Engineer          | [Buse OZER](https://github.com/acklnbuse)       |
 | QA Automation Engineer          | [Mazlum OZDEMIR](https://github.com/mazlumoz)   |
-| QA Automation Engineer          | [Mehmet Emin VAHAP](https://github.com/mmevaa)   |
-| QA Automation Engineer          | [Omer Faruk OZ](https://github.com/omerfoz)   |
+| QA Automation Engineer          | [Mehmet Emin VAHAP](https://github.com/mmevaa)  |
+| QA Automation Engineer          | [Omer Faruk OZ](https://github.com/omerfoz)     |
 
 ## License
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
