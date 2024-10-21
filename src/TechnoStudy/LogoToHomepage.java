@@ -18,7 +18,6 @@ public class LogoToHomepage extends BaseDriverParameter {
     public void LogoToHomepage() {
 
         POM locaters = new POM();
-        driver.get("https://techno.study/tr");
 
         By[] clickableElements = {
                 By.linkText("SDET-Yazılım Test Uzmanı"),

@@ -14,8 +14,6 @@ public class Booking extends BaseDriverParameter {
     public void Booking(){
         POM loceters=new POM();
 
-        driver.get("https://techno.study/tr/");
-
         wait.until(ExpectedConditions.elementToBeClickable(loceters.applyBtn)).click();
         wait.until(ExpectedConditions.visibilityOf(loceters.name)).sendKeys("testFake User");
         wait.until(ExpectedConditions.visibilityOf(loceters.email)).sendKeys("testTeam4@hotmail.com");

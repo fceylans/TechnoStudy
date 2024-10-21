@@ -19,8 +19,6 @@ public class TermsOfUse extends BaseDriverParameter {
         POM locators = new POM();
         JavascriptExecutor js=(JavascriptExecutor)driver;
 
-        driver.get("https://techno.study/tr/");
-
         WebElement footer= driver.findElement(By.xpath("(//div[@class='tn-atom'])[1]"));
         js.executeScript("arguments[0].scrollIntoView();", footer);
 
