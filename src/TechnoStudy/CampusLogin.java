@@ -14,9 +14,6 @@ public class CampusLogin extends BaseDriverParameter {
     public void CampusLogin() {
 
         POM locators = new POM();
-
-        driver.get("https://techno.study/");
-
         wait.until(ExpectedConditions.elementToBeClickable(locators.login));
         locators.login.click();
 

@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -22,27 +21,20 @@ public class BaseDriverParameter {
 
     @BeforeClass
     @Parameters("browserTipi")
-    public void BaslangicIslemleri(String browserTipi) {
+    public void setup(String browserTipi) {
 
-        switch (browserTipi.toLowerCase()) {
-            case "firefox":
-                driver = new FirefoxDriver();
-                break;
-            case "edge":
-                driver = new EdgeDriver();
-                break;
-            case "safari":
-                driver = new SafariDriver();
-                break;
-            default:
-                driver = new ChromeDriver();
+        if (browserTipi.equals("chrome")) {
+            driver = new ChromeDriver();
+        } else if (browserTipi.equals("firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browserTipi.equals("edge")) {
+            driver = new EdgeDriver();
         }
 
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.get("https://technostudy.com");
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         js = (JavascriptExecutor) driver;
-
     }
 
     @AfterClass
@@ -51,6 +43,5 @@ public class BaseDriverParameter {
         Tools.Wait(3);
         driver.quit();
     }
-
 
 }

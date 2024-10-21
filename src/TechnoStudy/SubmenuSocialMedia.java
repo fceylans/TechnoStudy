@@ -15,8 +15,6 @@ public class SubmenuSocialMedia extends BaseDriverParameter {
     public void US_05() {
         POM locators = new POM();
 
-        driver.get("https://techno.study/tr/");
-
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         WebElement footer = driver.findElement(By.id("rec684017893"));

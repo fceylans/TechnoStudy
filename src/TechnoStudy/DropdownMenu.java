@@ -15,7 +15,6 @@ public class DropdownMenu extends BaseDriver {
         POM locators = new POM();
         Random random = new Random();
 
-        driver.get("https://techno.study/tr/");
         js.executeScript("arguments[0].click()", locators.coursesDropdownn);
         Assert.assertFalse(locators.courses.isEmpty(), "Kurslar listesi boş olmamalı.");
 

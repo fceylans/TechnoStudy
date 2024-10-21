@@ -1,29 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="My Suit">
-    <test name="My Test 1">
-        <parameter name="browserTipi" value="chrome"></parameter>
-        <parameter name="browserTipi" value="edge"></parameter>
-        <parameter name="browserTipi" value="firefox"></parameter>
+<suite name="My Suite" parallel="tests" thread-count="3">
 
-        <classes>
-            <class name="TechnoStudy.Booking"></class>
-            <class name="TechnoStudy.CampusLogin"></class>
-            <class name="TechnoStudy.LogoToHomepage"></class>
-            <class name="TechnoStudy.SubMenuCourses"></class>
-            <class name="TechnoStudy.SubmenuSocialMedia"></class>
-            <class name="TechnoStudy.DropdownMenu"></class>
-            <class name="TechnoStudy.CourseDetails"></class>
-            <class name="TechnoStudy.TermsOfUse"></class>
-        </classes>
-
-
+    <!-- Test for Chrome -->
+    <test name="My Test - Chrome">
+        <parameter name="browserTipi" value="chrome"/>
         <groups>
             <run>
-                <include name="Smoke Test"></include>
-                <include name="Regression Test"></include>
+                <include name="Smoke Test"/>
+                <include name="Regression Test"/>
             </run>
         </groups>
-
+        <classes>
+            <class name="TechnoStudy.Booking"/>
+            <class name="TechnoStudy.CampusLogin"/>
+            <class name="TechnoStudy.LogoToHomepage"/>
+            <class name="TechnoStudy.SubMenuCourses"/>
+            <class name="TechnoStudy.SubmenuSocialMedia"/>
+            <class name="TechnoStudy.DropdownMenu"/>
+            <class name="TechnoStudy.CourseDetails"/>
+            <class name="TechnoStudy.TermsOfUse"/>
+        </classes>
     </test>
+
+    <!-- Test for Edge -->
+    <test name="My Test - Edge">
+        <parameter name="browserTipi" value="edge"/>
+        <groups>
+            <run>
+                <include name="Smoke Test"/>
+                <include name="Regression Test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TechnoStudy.Booking"/>
+            <class name="TechnoStudy.CampusLogin"/>
+            <class name="TechnoStudy.LogoToHomepage"/>
+            <class name="TechnoStudy.SubMenuCourses"/>
+            <class name="TechnoStudy.SubmenuSocialMedia"/>
+            <class name="TechnoStudy.DropdownMenu"/>
+            <class name="TechnoStudy.CourseDetails"/>
+            <class name="TechnoStudy.TermsOfUse"/>
+        </classes>
+    </test>
+
+    <!-- Test for Firefox -->
+    <test name="My Test - Firefox">
+        <parameter name="browserTipi" value="firefox"/>
+        <groups>
+            <run>
+                <include name="Smoke Test"/>
+                <include name="Regression Test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TechnoStudy.Booking"/>
+            <class name="TechnoStudy.CampusLogin"/>
+            <class name="TechnoStudy.LogoToHomepage"/>
+            <class name="TechnoStudy.SubMenuCourses"/>
+            <class name="TechnoStudy.SubmenuSocialMedia"/>
+            <class name="TechnoStudy.DropdownMenu"/>
+            <class name="TechnoStudy.CourseDetails"/>
+            <class name="TechnoStudy.TermsOfUse"/>
+        </classes>
+    </test>
+
 </suite>
